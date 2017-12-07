@@ -2,7 +2,7 @@
 
 # HNUPlus
 
-HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运行项目前，请先到[Bmob官网](https://wwww.bmob.cn)申请一个APPID，然后在Constant.kt替换我的APPID,谢谢！
+HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运行项目前，请先到[Bmob官网](https://www.bmob.cn)申请一个APPID，然后在Constant.kt替换我的APPID,谢谢！
 
 ## 注意
 这个项目还在进行中，并不是最后成品。
