@@ -1,26 +1,23 @@
+[English README](./README_en.md)
+
 ﻿# HNUPlus
-HNUPlus is a Campus Community Android application.Powered by [Bmob Cloud](https://www.bmob.cn). Before building this project, please apply the AppID and replace my AppID in `Constant.kt` with yours.
+
+HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运行项目前，请先到[Bmob官网](https://wwww.bmob.cn)申请一个APPID，然后在Constant.kt替换我的APPID,谢谢！
 
 ## Remind
-This is still an ongoing project and does not represent the quality of the final work.
-## Screenshots
+这个项目还在进行中，并不是最后成品。
+## 截图
 
-|           Signup            |          Main           |          Post           |
-| :-------------------------: | :---------------------: | :---------------------: |
-| ![Signup](./art/Signup.png) | ![Main](./art/Main.png) | ![Post](./art/Post.png) |
-
-|          User           |            Comments             |            Refresh            |
-| :---------------------: | :-----------------------------: | :---------------------------: |
-| ![User](./art/User.png) | ![Comments](./art/Comments.png) | ![Refresh](./art/Refresh.png) |
+![Main](./art/Main.png)
 
 
-## APK Download
+## APK 下载
 
 [Google Drive](https://drive.google.com/open?id=1A-q6zA-BxGhtYS5wVwmLrygzjlLzsWr6)
 
-## Build
+## 导入项目
 
-### Open the project in Android Studio
+### 在Android Studio打开项目
 
 ```
 
@@ -29,23 +26,17 @@ git clone https://github.com/zhaoweihaoChina/hnuplus.git
 ```
 
 
-Open the `hunplus/` directory in Android Studio.
+在Android Studio打开 `hunplus/` 目录
 
+### 注意
 
+由于Kotlin语言在Android Studio 3.0前需要安装Kotlin插件，具体方法可参见[我的文章](http://zhaoweihao.me/2017/08/13/%E7%94%A8Kotlin%E5%BC%80%E5%8F%91%EF%BC%8CAndroid%20Studio%E9%85%8D%E7%BD%AEKotlin%E7%AF%87/)
 
-
-### Troubleshooting
-
-+ Update the Android Studio to latest version.
-+ Update the Kotlin to latest version.
-+ Try to clean the project and rebuild it.
-+ If none of the solutions above, file an issue or email me.
-
-## Contact
+## 联系我
 
 zhaoweihaochn#foxmail.com
 
-## Donate
+## 请我喝咖啡
 [Paypal](https://www.paypal.me/zhaoweihao)
 
 [Alipay支付宝](http://op4e089f0.bkt.clouddn.com/1512475882201.jpg)
