@@ -1,11 +1,13 @@
-[English README](./README_en.md)
+:uk:[English README](./README_en.md)
 
 # HNUPlus
 
 HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运行项目前，请先到[Bmob官网](https://www.bmob.cn)申请一个APPID，然后在Constant.kt替换我的APPID,谢谢！
 
 ## 注意
-这个项目还在进行中，并不是最后成品。
+:warning:这个项目还在进行中，并不是最后成品。
+## Changelog
+2017/12/24 - :bug:修复Android Studio 3.0下的一些问题
 ## 截图
 
 ![Main](./art/Main.png)
@@ -34,12 +36,12 @@ git clone https://github.com/zhaoweihaoChina/hnuplus.git
 
 ## 联系我
 
-zhaoweihaochn#foxmail.com
+:mailbox:zhaoweihaochn#gmail.com
 
 ## 请我喝咖啡
-[Paypal](https://www.paypal.me/zhaoweihao)
+:heart:[Paypal](https://www.paypal.me/zhaoweihao)
 
-[Alipay支付宝](http://op4e089f0.bkt.clouddn.com/1512475882201.jpg)
+:heart:[Alipay支付宝](http://op4e089f0.bkt.clouddn.com/1512475882201.jpg)
 
 ## License
 

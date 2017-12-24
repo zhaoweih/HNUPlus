@@ -2,6 +2,7 @@ package me.zhaoweihao.hnuplus.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.media.Image
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -32,9 +33,9 @@ class PostAdapter(private val mPostList: List<Post>,private val disableCode: Int
     private val disable = disableCode
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var postAuthor: TextView = view.findViewById(R.id.tv_author) as TextView
-        var postContent: TextView = view.findViewById(R.id.tv_content) as TextView
-        var postImage: ImageView = view.findViewById(R.id.iv_post) as ImageView
+        var postAuthor = view.findViewById<TextView>(R.id.tv_author)
+        var postContent = view.findViewById<TextView>(R.id.tv_content)
+        var postImage = view.findViewById<ImageView>(R.id.iv_post)
         var postView: View = view
     }
 

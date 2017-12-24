@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager
 
 import android.os.Build
 import android.view.View
+import android.view.ViewGroup
 
 
 class SigninActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class SigninActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            findViewById(android.R.id.content).systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            findViewById<ViewGroup>(android.R.id.content).systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
         }
 
         setContentView(R.layout.activity_signin)

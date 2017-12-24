@@ -19,8 +19,8 @@ import me.zhaoweihao.hnuplus.R
 class CommentAdapter(private val mCommentList: List<Comment>) : RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var commentatorName: TextView = view.findViewById(R.id.tv_commentator_name) as TextView
-        var commentatorContent: TextView = view.findViewById(R.id.tv_commentator_content) as TextView
+        var commentatorName = view.findViewById<TextView>(R.id.tv_commentator_name)
+        var commentatorContent = view.findViewById<TextView>(R.id.tv_commentator_content)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

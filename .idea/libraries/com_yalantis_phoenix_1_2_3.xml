@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.yalantis:phoenix-1.2.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/phoenix-1.2.3.aar/c33f119c94e2a81c0035f6c67f12dd84/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/phoenix-1.2.3.aar/c33f119c94e2a81c0035f6c67f12dd84/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yalantis/phoenix/1.2.3/f2827b71bc0911fa257590d36f4ca951d2ecedda/phoenix-1.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

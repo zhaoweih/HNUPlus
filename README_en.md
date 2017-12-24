@@ -3,6 +3,8 @@ HNUPlus is a Campus Community Android application.Powered by [Bmob Cloud](https:
 
 ## Remind
 This is still an ongoing project and does not represent the quality of the final work.
+## Changelog
+2017/12/24 - :bug:fix  some bugs in Android Studio 3.0
 ## Screenshots
 
 ![Main](./art/Main.png)
@@ -37,7 +39,7 @@ Open the `hunplus/` directory in Android Studio.
 
 ## Contact
 
-zhaoweihaochn#foxmail.com
+zhaoweihaochn#gmail.com
 
 ## Donate
 [Paypal](https://www.paypal.me/zhaoweihao)
