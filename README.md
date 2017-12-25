@@ -1,5 +1,3 @@
-:uk:[English README](./README_en.md)
-
 # HNUPlus
 
 HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运行项目前，请先到[Bmob官网](https://www.bmob.cn)申请一个APPID，然后在Constant.kt替换我的APPID,谢谢！
@@ -10,12 +8,13 @@ HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运�
 2017/12/24 - :bug:修复Android Studio 3.0下的一些问题
 ## 截图
 
-![Main](./art/Main.png)
+|            MainPage            |        CommentsPage         |        SignupPage         |
+| :----------------------------: | :-------------------------: | :-----------------------: |
+| ![MainPage](./art/Main.jpg) | ![CommentsPage](./art/Comments.jpg) | ![SignupPage](./art/Signup.jpg) |
 
-
-## APK 下载
-
-[Google Drive](https://drive.google.com/open?id=1A-q6zA-BxGhtYS5wVwmLrygzjlLzsWr6)
+|        SelectPage         |         PostPage         |          RefreshPage           |
+| :-----------------------: | :----------------------: | :----------------------------: |
+| ![SelectPage](./art/Select.jpg) | ![PostPage](./art/Post.jpg) | ![RefreshPage](./art/Refresh.jpg) |
 
 ## 导入项目
 
@@ -23,12 +22,12 @@ HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运�
 
 ```
 
-git clone https://github.com/zhaoweihaoChina/hnuplus.git
+git clone https://github.com/zhaoweihaoChina/HNUPlus.git
 
 ```
 
 
-在Android Studio打开 `hunplus/` 目录
+在Android Studio打开 `HNUPlus/` 目录
 
 ### 注意
 
@@ -39,7 +38,6 @@ git clone https://github.com/zhaoweihaoChina/hnuplus.git
 :mailbox:zhaoweihaochn#gmail.com
 
 ## 请我喝咖啡
-:heart:[Paypal](https://www.paypal.me/zhaoweihao)
 
 :heart:[Alipay支付宝](http://op4e089f0.bkt.clouddn.com/1512475882201.jpg)
 
