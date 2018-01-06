@@ -5,7 +5,7 @@ HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运�
 ## 注意
 :warning:这个项目还在进行中，并不是最后成品。
 ## Changelog
-2018/01/06-完成LBS天气功能的model，还没写view,如要测试请将WeatherActivity设为第一启动,观察Log
+2018/01/06-完成LBS天气功能的model，还没写view,如要测试请将WeatherActivity设为第一启动,观察Log<br>
 2017/12/24 - :bug:修复Android Studio 3.0下的一些问题
 ## 相关
 Yahoo Weather API<br>
