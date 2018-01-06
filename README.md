@@ -5,43 +5,25 @@ HNUPlus是一个校园社区Android程序。使用Bmob SDK保存数据。在运�
 ## 注意
 :warning:这个项目还在进行中，并不是最后成品。
 ## Changelog
+2018/01/06-完成LBS天气功能的model，还没写view,如要测试请将WeatherActivity设为第一启动,观察Log
 2017/12/24 - :bug:修复Android Studio 3.0下的一些问题
-## 截图
-
-|            MainPage            |        CommentsPage         |        SignupPage         |
-| :----------------------------: | :-------------------------: | :-----------------------: |
-| ![MainPage](./art/Main.jpg) | ![CommentsPage](./art/Comments.jpg) | ![SignupPage](./art/Signup.jpg) |
-
-|        SelectPage         |         PostPage         |          RefreshPage           |
-| :-----------------------: | :----------------------: | :----------------------------: |
-| ![SelectPage](./art/Select.jpg) | ![PostPage](./art/Post.jpg) | ![RefreshPage](./art/Refresh.jpg) |
-
-## 导入项目
-
-### 在Android Studio打开项目
-
-```
-
-git clone https://github.com/zhaoweihaoChina/HNUPlus.git
-
-```
-
-
-在Android Studio打开 `HNUPlus/` 目录
-
-### 注意
-
-由于Kotlin语言在Android Studio 3.0前需要安装Kotlin插件，具体方法可参见[我的文章](http://zhaoweihao.me/2017/08/13/%E7%94%A8Kotlin%E5%BC%80%E5%8F%91%EF%BC%8CAndroid%20Studio%E9%85%8D%E7%BD%AEKotlin%E7%AF%87/)
-
+## 相关
+Yahoo Weather API<br>
+Tencent Map SDK<br>
+Bmob SDK<br>
+Gson<br>
+Phoenix<br>
+Butterknife<br>
+Anko<br>
+Matisse<br>
+Glide<br>
+Photoview
 ## 联系我
-
 :mailbox:zhaoweihaochn#gmail.com
-
+## About me
+http://zhaoweihao.me/about/
 ## 请我喝咖啡
-
 :heart:[Alipay支付宝](http://op4e089f0.bkt.clouddn.com/1512475882201.jpg)
-
 ## License
-
 HUNPlus is under an MIT license. See the [LICENSE](LICENSE) for more information.
 
