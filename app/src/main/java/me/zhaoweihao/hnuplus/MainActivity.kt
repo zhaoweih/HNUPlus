@@ -18,8 +18,8 @@ import cn.bmob.v3.listener.SaveListener
 import kotlinx.android.synthetic.main.activity_main.*
 import me.zhaoweihao.hnuplus.Constant.Constant
 import me.zhaoweihao.hnuplus.Interface.HotInterface
-import me.zhaoweihao.hnuplus.JavaBean.MyUser
-import me.zhaoweihao.hnuplus.JavaBean.Post
+import me.zhaoweihao.hnuplus.Bmob.MyUser
+import me.zhaoweihao.hnuplus.Bmob.Post
 import cn.bmob.v3.listener.UploadFileListener
 import cn.bmob.v3.datatype.BmobFile
 import org.jetbrains.anko.toast

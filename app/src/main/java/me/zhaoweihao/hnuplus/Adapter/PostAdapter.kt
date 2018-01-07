@@ -2,7 +2,6 @@ package me.zhaoweihao.hnuplus.Adapter
 
 import android.content.Context
 import android.content.Intent
-import android.media.Image
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +13,7 @@ import com.bumptech.glide.Glide
 import com.yoavst.kotlin.`KotlinPackage$Toasts$53212cf1`.toast
 
 import me.zhaoweihao.hnuplus.CommentActivity
-import me.zhaoweihao.hnuplus.JavaBean.Post
+import me.zhaoweihao.hnuplus.Bmob.Post
 import me.zhaoweihao.hnuplus.MainActivity
 import me.zhaoweihao.hnuplus.PhotoViewActivity
 import me.zhaoweihao.hnuplus.R

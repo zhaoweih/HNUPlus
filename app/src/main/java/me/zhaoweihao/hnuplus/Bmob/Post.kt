@@ -1,4 +1,4 @@
-package me.zhaoweihao.hnuplus.JavaBean
+package me.zhaoweihao.hnuplus.Bmob
 
 import cn.bmob.v3.BmobObject
 import cn.bmob.v3.datatype.BmobFile

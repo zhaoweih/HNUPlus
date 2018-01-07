@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-import me.zhaoweihao.hnuplus.JavaBean.Comment
+import me.zhaoweihao.hnuplus.Bmob.Comment
 import me.zhaoweihao.hnuplus.R
 
 /**

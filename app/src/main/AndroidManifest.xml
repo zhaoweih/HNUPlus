@@ -12,6 +12,7 @@
 
     <!-- 腾讯定位SDK所需要的权限 -->
 
+
     <!-- 通过GPS得到精确位置 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 通过网络得到粗略位置 -->
@@ -27,8 +28,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="TencentMapSDK"
+        <meta-data
+            android:name="TencentMapSDK"
             android:value="YBYBZ-HFJRF-WVPJC-JK4ID-DRF57-CTFJ2" />
+
         <activity android:name=".MainActivity">
 
         </activity>
@@ -41,8 +44,11 @@
             android:theme="@style/Theme.AppTheme.TranslucentStatusBar" />
         <activity
             android:name=".PhotoViewActivity"
-            android:theme="@style/Theme.AppTheme.TranslucentStatusBar"></activity>
+            android:theme="@style/Theme.AppTheme.TranslucentStatusBar" />
         <activity android:name=".WeatherActivity">
+
+        </activity>
+        <activity android:name=".NoteActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

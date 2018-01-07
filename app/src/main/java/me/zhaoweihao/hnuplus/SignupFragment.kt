@@ -13,7 +13,7 @@ import cn.bmob.v3.BmobUser
 import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.SaveListener
 import kotlinx.android.synthetic.main.signup_layout.*
-import me.zhaoweihao.hnuplus.JavaBean.MyUser
+import me.zhaoweihao.hnuplus.Bmob.MyUser
 
 /**
  * Created by Administrator on 2017/11/10.

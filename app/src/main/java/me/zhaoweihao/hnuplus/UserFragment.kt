@@ -14,7 +14,7 @@ import android.widget.Toast
 import cn.bmob.v3.BmobUser
 import kotlinx.android.synthetic.main.user_layout.*
 
-import me.zhaoweihao.hnuplus.JavaBean.MyUser
+import me.zhaoweihao.hnuplus.Bmob.MyUser
 
 
 /**

@@ -65,7 +65,7 @@ public class WeatherActivity extends AppCompatActivity implements TencentLocatio
                 Weather weather = Utility.handleWeatherResponse(responseData);
                 Channel channel = weather.getQuery().getResults().getChannel();
                 String location = channel.getLocation().getCity()+","+channel.getLocation().getRegion()+","+channel.getLocation().getCountry();
-                Log.d("WA",location);
+                Log.d("WA2",location);
             }
         });
     }
@@ -74,7 +74,7 @@ public class WeatherActivity extends AppCompatActivity implements TencentLocatio
     public void onLocationChanged(TencentLocation tencentLocation, int error, String reason) {
         if (TencentLocation.ERROR_OK == error) {
             // 定位成功
-            Log.d("WA",tencentLocation.getAddress());
+            Log.d("WA1",tencentLocation.getAddress());
             String latitude = String.valueOf(tencentLocation.getLatitude());
             String longitude = String.valueOf(tencentLocation.getLongitude());
             requestWeather(latitude,longitude);

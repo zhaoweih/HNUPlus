@@ -18,8 +18,8 @@ import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.FindListener
 
 import me.zhaoweihao.hnuplus.Adapter.PostAdapter
-import me.zhaoweihao.hnuplus.JavaBean.MyUser
-import me.zhaoweihao.hnuplus.JavaBean.Post
+import me.zhaoweihao.hnuplus.Bmob.MyUser
+import me.zhaoweihao.hnuplus.Bmob.Post
 
 import android.preference.PreferenceManager
 
@@ -50,9 +50,13 @@ class HotFragment : Fragment(), HotInterface {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        loadData()
+//        loadData()
 
         pull_to_refresh!!.setOnRefreshListener { loadData() }
+//        pull_to_refresh!!.setOnRefreshListener {
+//            val intent = Intent(activity,NoteActivity::class.java)
+//                    activity.startActivity(intent)
+//        }
 
         fb!!.setOnClickListener {
             //get local user data information
