@@ -5,9 +5,18 @@ package me.zhaoweihao.hnuplus.Gson;
  */
 
 public class Condition {
+    private String code;
     private String date;
     private String temp;
     private String text;
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 
     public String getDate() {
         return date;

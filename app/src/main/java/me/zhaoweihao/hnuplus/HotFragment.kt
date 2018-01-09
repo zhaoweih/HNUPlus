@@ -50,13 +50,10 @@ class HotFragment : Fragment(), HotInterface {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        loadData()
+        loadData()
 
         pull_to_refresh!!.setOnRefreshListener { loadData() }
-//        pull_to_refresh!!.setOnRefreshListener {
-//            val intent = Intent(activity,NoteActivity::class.java)
-//                    activity.startActivity(intent)
-//        }
+
 
         fb!!.setOnClickListener {
             //get local user data information

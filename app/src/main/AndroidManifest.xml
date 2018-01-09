@@ -46,14 +46,15 @@
             android:name=".PhotoViewActivity"
             android:theme="@style/Theme.AppTheme.TranslucentStatusBar" />
         <activity android:name=".WeatherActivity">
-
-        </activity>
-        <activity android:name=".NoteActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".NoteActivity"></activity>
+        <activity android:name=".TestActivity">
+
         </activity>
     </application>
 

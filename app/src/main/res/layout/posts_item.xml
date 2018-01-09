@@ -8,8 +8,6 @@
     app:cardCornerRadius="4dp"
     android:elevation="5dp"
     android:layout_marginTop="15dp"
-
-
     >
 
     <LinearLayout
@@ -82,8 +80,8 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@color/moreWhiteGrey"
-
                     />
+
                 <ImageView
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
@@ -91,14 +89,9 @@
                     android:src="@drawable/ic_comment_whitegrey_24dp"
                     />
 
-
             </FrameLayout>
 
-
-
-
         </LinearLayout>
-
 
     </LinearLayout>
 

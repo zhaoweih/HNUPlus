@@ -11,9 +11,14 @@ import me.zhaoweihao.hnuplus.Gson.Weather;
 
 public class Utility {
     public static Weather handleWeatherResponse(String response){
+        try{
             Gson gson=new Gson();
             Weather weather=gson.fromJson(response,Weather.class);
             return weather;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+            return null;
     }
 
 }
