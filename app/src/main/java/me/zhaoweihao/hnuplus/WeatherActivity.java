@@ -146,7 +146,8 @@ public class WeatherActivity extends AppCompatActivity implements TencentLocatio
         String visibilityStr = channel.getAtmosphere().getVisibility();
         String code = channel.getItem().getCondition().getCode();
 
-        location.setText(locationStr);
+//        location.setText(locationStr);
+        setTitle(locationStr);
         status.setText(statusStr);
         degree.setText(degreeStr+" C");
         humidity.setText(humidityStr+" %");

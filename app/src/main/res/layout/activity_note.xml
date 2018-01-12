@@ -7,19 +7,53 @@
     android:orientation="vertical"
     android:id="@+id/ll_note"
     tools:context="me.zhaoweihao.hnuplus.NoteActivity">
-    <Button
-        android:id="@+id/save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="save"
-        />
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_notes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
-        ></android.support.v7.widget.RecyclerView>
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:overScrollMode="never"
+        android:minHeight="525dp"
+        />
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_note_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Made By "
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ZhaoWeihao"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="italic"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>
