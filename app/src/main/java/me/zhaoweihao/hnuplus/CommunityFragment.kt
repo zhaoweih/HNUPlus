@@ -1,9 +1,9 @@
 package me.zhaoweihao.hnuplus
 
+import android.app.Fragment
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -27,14 +27,14 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.yoavst.kotlin.`KotlinPackage$SystemServices$69d7d2d0`.connectivityManager
 
-import kotlinx.android.synthetic.main.hot_layout.*
-import me.zhaoweihao.hnuplus.Interface.HotInterface
+import kotlinx.android.synthetic.main.community_layout.*
+import me.zhaoweihao.hnuplus.Interface.Communitynterface
 
 /**
- * Created by Administrator on 2017/11/9.
+ * Created by ZhaoWeihao on 2017/11/9.
  */
 
-class HotFragment : Fragment(), HotInterface {
+class CommunityFragment : Fragment(), Communitynterface {
 
     private var layoutManager: LinearLayoutManager? = null
     private var adapter: PostAdapter? = null
@@ -42,15 +42,15 @@ class HotFragment : Fragment(), HotInterface {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val hotLayout = inflater!!.inflate(R.layout.hot_layout,
+        val communityLayout = inflater!!.inflate(R.layout.community_layout,
                 container, false)
-        return hotLayout
+        return communityLayout
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        loadData()
+        loadData()
 
         pull_to_refresh!!.setOnRefreshListener { loadData() }
 
@@ -99,7 +99,7 @@ class HotFragment : Fragment(), HotInterface {
                 pull_to_refresh!!.setRefreshing(true)
                 val query = BmobQuery<Post>()
                 //        query.setLimit(15)
-                query.include("author,image")
+                query.include("author,image,likes")
                 query.findObjects(object : FindListener<Post>() {
 
                     override fun done(`object`: List<Post>, e: BmobException?) {

@@ -1,15 +1,15 @@
 package me.zhaoweihao.hnuplus
 
+import android.app.FragmentManager
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.FragmentManager
 import android.view.View
 import android.view.ViewGroup
 
 class PhotoViewActivity : AppCompatActivity() {
 
-    private var fragmentManager: FragmentManager? = null
+
     private var photoViewFragment: PhotoViewFragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +20,6 @@ class PhotoViewActivity : AppCompatActivity() {
         }
 
         setContentView(R.layout.activity_photo_view)
-
-        fragmentManager = supportFragmentManager
 
         // Open a Fragment transaction
         val transaction = (fragmentManager as FragmentManager?)!!.beginTransaction()

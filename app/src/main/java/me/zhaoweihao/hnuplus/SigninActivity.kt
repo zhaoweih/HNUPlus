@@ -1,8 +1,8 @@
 package me.zhaoweihao.hnuplus
 
+import android.app.FragmentManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.FragmentManager
 
 import android.os.Build
 import android.view.View
@@ -11,7 +11,6 @@ import android.view.ViewGroup
 
 class SigninActivity : AppCompatActivity() {
 
-    private var fragmentManager: FragmentManager? = null
     private var signinFragment: SigninFragment? = null
     private var signupFragment: SignupFragment? = null
 
@@ -23,8 +22,6 @@ class SigninActivity : AppCompatActivity() {
         }
 
         setContentView(R.layout.activity_signin)
-
-        fragmentManager = supportFragmentManager
 
         // Open a Fragment transaction
         val transaction = (fragmentManager as FragmentManager?)!!.beginTransaction()

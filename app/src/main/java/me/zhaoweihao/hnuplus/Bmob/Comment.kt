@@ -3,7 +3,7 @@ package me.zhaoweihao.hnuplus.Bmob
 import cn.bmob.v3.BmobObject
 
 /**
- * Created by Administrator on 2017/11/9.
+ * Created by ZhaoWeihao on 2017/11/9.
  */
 
 class Comment : BmobObject() {

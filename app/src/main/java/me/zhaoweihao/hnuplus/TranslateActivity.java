@@ -78,6 +78,8 @@ public class TranslateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
 
+        setTitle("Translate");
+
         ButterKnife.bind(this);
 
         button.setVisibility(View.INVISIBLE);

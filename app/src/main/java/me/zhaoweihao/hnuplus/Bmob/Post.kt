@@ -5,7 +5,7 @@ import cn.bmob.v3.datatype.BmobFile
 import cn.bmob.v3.datatype.BmobRelation
 
 /**
- * Created by Administrator on 2017/11/9.
+ * Created by ZhaoWeihao on 2017/11/9.
  */
 
 class Post : BmobObject() {

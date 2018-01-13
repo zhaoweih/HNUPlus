@@ -1,5 +1,6 @@
 package me.zhaoweihao.hnuplus;
 
+import android.app.Fragment;
 import android.app.ProgressDialog;
 
 import android.content.DialogInterface;
@@ -8,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.taishi.flipprogressdialog.FlipProgressDialog;
 
 import java.util.Collections;
 import java.util.List;
@@ -40,9 +41,10 @@ import me.zhaoweihao.hnuplus.Interface.CommentInterface;
 import me.zhaoweihao.hnuplus.Bmob.Comment;
 import me.zhaoweihao.hnuplus.Bmob.MyUser;
 import me.zhaoweihao.hnuplus.Bmob.Post;
+import me.zhaoweihao.hnuplus.Utils.Utility;
 
 /**
- * Created by Administrator on 2017/11/10.
+ * Created by ZhaoWeihao on 2017/11/10.
  */
 
 public class CommentFragment extends Fragment implements CommentInterface {
@@ -61,6 +63,7 @@ public class CommentFragment extends Fragment implements CommentInterface {
     private ProgressDialog progressDialog;
     private String objectID,authorObjectID,imageUrl;
     private MyUser user;
+    private FlipProgressDialog flipProgressDialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -71,7 +74,7 @@ public class CommentFragment extends Fragment implements CommentInterface {
         ButterKnife.bind(this, commentLayout);
 
         user = BmobUser.getCurrentUser(MyUser.class);
-        //Get data from HotFragment
+        //Get data from CommunityFragment
         Intent intent = getActivity().getIntent();
         commentAuthorTextView.setText(intent.getStringExtra("author"));
         commentContentTextView.setText(intent.getStringExtra("content"));
@@ -142,10 +145,8 @@ public class CommentFragment extends Fragment implements CommentInterface {
             }
         });
 
-        progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Loading...");
-        progressDialog.setCancelable(true);
-        progressDialog.show();
+        flipProgressDialog=Utility.myDialog();
+        flipProgressDialog.show(getFragmentManager(),"");
 
         refreshCommentData(objectID);
 
@@ -164,14 +165,15 @@ public class CommentFragment extends Fragment implements CommentInterface {
             @Override
             public void done(List<Comment> objects,BmobException e) {
                 if(objects.size()==0){
-                    progressDialog.hide();
+                    flipProgressDialog.dismiss();
                 }else{
                 Collections.reverse(objects);
+                recyclerView.setNestedScrollingEnabled(false);
                 layoutManager = new LinearLayoutManager(getActivity());
                 recyclerView.setLayoutManager(layoutManager);
                 adapter = new CommentAdapter(objects);
                 recyclerView.setAdapter(adapter);
-                progressDialog.hide();}
+                flipProgressDialog.dismiss();}
             }
         });
     }
@@ -195,10 +197,7 @@ public class CommentFragment extends Fragment implements CommentInterface {
 
         }else{
 
-            progressDialog = new ProgressDialog(getActivity());
-            progressDialog.setMessage("Loading...");
-            progressDialog.setCancelable(true);
-            progressDialog.show();
+            flipProgressDialog.show(getFragmentManager(),"");
 
             Post post = new Post();
             post.setObjectId(objectID);
@@ -227,9 +226,7 @@ public class CommentFragment extends Fragment implements CommentInterface {
     @Override
     public void onPause() {
         super.onPause();
-        if (progressDialog != null) {
-            progressDialog.dismiss();
-            progressDialog = null; }
+
     }
 
 

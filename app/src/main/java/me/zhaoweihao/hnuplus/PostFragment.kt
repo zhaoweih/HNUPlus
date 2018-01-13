@@ -2,13 +2,13 @@ package me.zhaoweihao.hnuplus
 
 import android.Manifest
 import android.app.Activity.RESULT_OK
+import android.app.Fragment
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
-import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.view.*
@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.post_layout.*
 import me.zhaoweihao.hnuplus.Interface.PostInterface
 
 /**
- * Created by Administrator on 2017/11/9.
+ * Created by ZhaoWeihao on 2017/11/9.
  */
 
 class PostFragment :  Fragment(), PostInterface {

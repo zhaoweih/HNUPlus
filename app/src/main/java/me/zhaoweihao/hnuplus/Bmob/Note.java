@@ -3,7 +3,7 @@ package me.zhaoweihao.hnuplus.Bmob;
 import cn.bmob.v3.BmobObject;
 
 /**
- * Created by Administrator on 2018/1/7.
+ * Created by ZhaoWeihao on 2018/1/7.
  */
 
 public class Note extends BmobObject {

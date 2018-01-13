@@ -10,7 +10,7 @@ import me.zhaoweihao.hnuplus.Bmob.Comment
 import me.zhaoweihao.hnuplus.R
 
 /**
- * Created by zhaoweihaoChina on 2017/11/10.
+ * Created by ZhaoWeihao on 2017/11/10.
  */
 
 /**

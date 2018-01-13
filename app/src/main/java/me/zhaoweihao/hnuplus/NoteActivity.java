@@ -13,18 +13,21 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.taishi.flipprogressdialog.FlipProgressDialog;
+
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.UpdateListener;
 import me.zhaoweihao.hnuplus.Adapter.NoteAdapter;
 import me.zhaoweihao.hnuplus.Bmob.Note;
+import me.zhaoweihao.hnuplus.Utils.Utility;
 
 public class NoteActivity extends AppCompatActivity {
 
@@ -34,20 +37,21 @@ public class NoteActivity extends AppCompatActivity {
     LinearLayout linearLayout;
 
     private NoteAdapter noteAdapter;
+    private FlipProgressDialog flipProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
-//        Bmob.initialize(this,"a15e40755375ee7434e6be8c000c184b");
+        flipProgressDialog= Utility.myDialog();
+        flipProgressDialog.show(getFragmentManager(),"");
 
         ButterKnife.bind(this);
 
         setTitle("Note");
 
         updateData();
-
 
     }
 
@@ -68,8 +72,20 @@ public class NoteActivity extends AppCompatActivity {
                     noteAdapter = new NoteAdapter(list,NoteActivity.this);
                     recyclerView.setAdapter(noteAdapter);
                     linearLayout.setVisibility(View.VISIBLE);
+                    flipProgressDialog.dismiss();
                 }else{
                     Log.d("NA1","failed");
+                    List<Note> noteList= new ArrayList<>();
+                    StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+                    recyclerView.setLayoutManager(layoutManager);
+                    recyclerView.setNestedScrollingEnabled(false);
+                    Note note = new Note();
+                    note.setContent("");
+                    noteList.add(note);
+                    noteAdapter = new NoteAdapter(noteList,NoteActivity.this);
+                    recyclerView.setAdapter(noteAdapter);
+                    linearLayout.setVisibility(View.VISIBLE);
+                    flipProgressDialog.dismiss();
                 }
             }
         });
@@ -102,10 +118,10 @@ public class NoteActivity extends AppCompatActivity {
                 .create().show();
     }
 
-
     @Override
     protected void onRestart() {
         super.onRestart();
+        flipProgressDialog.show(getFragmentManager(),"");
         updateData();
         Log.d("NA","onRestart");
     }

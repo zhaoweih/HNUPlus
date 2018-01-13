@@ -1,9 +1,8 @@
 package me.zhaoweihao.hnuplus
 
-import android.app.ProgressDialog
+import android.app.Fragment
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
-import android.support.v4.app.Fragment
 
 import android.view.LayoutInflater
 import android.view.View
@@ -14,18 +13,21 @@ import android.widget.Toast
 import cn.bmob.v3.BmobUser
 import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.SaveListener
+import com.taishi.flipprogressdialog.FlipProgressDialog
 import kotlinx.android.synthetic.main.signin_layout.*
+import me.zhaoweihao.hnuplus.Utils.Utility
 
 
 /**
- * Created by Administrator on 2017/11/10.
+ * Created by ZhaoWeihao on 2017/11/10.
  */
 
 
 class SigninFragment : Fragment() {
 
     private var anim: AnimationDrawable? = null
-    private var progressDialog: ProgressDialog? = null
+
+    private var flipProgressDialog:FlipProgressDialog? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -41,6 +43,9 @@ class SigninFragment : Fragment() {
         anim!!.setEnterFadeDuration(6000)
         anim!!.setExitFadeDuration(2000)
 
+        flipProgressDialog= Utility.myDialog()
+
+
         btn_signup_1!!.setOnClickListener { (activity as SigninActivity).toSignupFragment() }
 
         btn_signin_2!!.setOnClickListener {
@@ -51,10 +56,7 @@ class SigninFragment : Fragment() {
                 Toast.makeText(activity, "can't be empty", Toast.LENGTH_SHORT).show()
             } else {
 
-                progressDialog = ProgressDialog(activity)
-                progressDialog!!.setMessage("Loading...")
-                progressDialog!!.setCancelable(true)
-                progressDialog!!.show()
+                flipProgressDialog!!.show(fragmentManager,"")
 
                 val bu2 = BmobUser()
                 bu2.username = username
@@ -64,19 +66,17 @@ class SigninFragment : Fragment() {
                     override fun done(bmobUser: BmobUser, e: BmobException?) {
                         if (e == null) {
                             Toast.makeText(activity, "signin successfully", Toast.LENGTH_SHORT).show()
-                            progressDialog!!.dismiss()
+                            flipProgressDialog!!.dismiss()
                             activity.finish()
                         } else {
                             Toast.makeText(activity, "signin failed", Toast.LENGTH_SHORT).show()
-                            progressDialog!!.hide()
+                            flipProgressDialog!!.dismiss()
                         }
                     }
                 })
 
             }
         }
-
-        btn_back_1!!.setOnClickListener { activity.finish() }
     }
 
     override fun onResume() {
@@ -89,10 +89,6 @@ class SigninFragment : Fragment() {
         super.onPause()
         if (anim != null && anim!!.isRunning) {
             anim!!.stop()
-        }
-        if (progressDialog != null) {
-            progressDialog!!.dismiss()
-            progressDialog = null
         }
     }
 

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
     <FrameLayout
         android:id="@+id/content"
@@ -18,7 +24,7 @@
         android:background="@color/grey" >
 
         <RelativeLayout
-            android:id="@+id/hot_layout"
+            android:id="@+id/community_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" >
@@ -30,18 +36,18 @@
                 android:orientation="vertical" >
 
                 <ImageView
-                    android:id="@+id/hot_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/community_image"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_home_black_24dp" />
+                    android:src="@drawable/community" />
 
                 <TextView
-                    android:id="@+id/hot_text"
+                    android:id="@+id/community_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Hot"
+                    android:text="Community"
                     android:textColor="@color/white" />
             </LinearLayout>
         </RelativeLayout>
@@ -60,10 +66,10 @@
 
                 <ImageView
                     android:id="@+id/more_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_home_black_24dp" />
+                    android:src="@drawable/more" />
 
                 <TextView
                     android:id="@+id/more_text"
@@ -90,10 +96,10 @@
 
                 <ImageView
                     android:id="@+id/user_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_home_black_24dp" />
+                    android:src="@drawable/user" />
 
                 <TextView
                     android:id="@+id/user_text"
@@ -105,5 +111,11 @@
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
+    </LinearLayout>
 
-</LinearLayout>
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

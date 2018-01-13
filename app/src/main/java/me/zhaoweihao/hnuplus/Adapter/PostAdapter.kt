@@ -3,6 +3,7 @@ package me.zhaoweihao.hnuplus.Adapter
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,8 +19,9 @@ import me.zhaoweihao.hnuplus.MainActivity
 import me.zhaoweihao.hnuplus.PhotoViewActivity
 import me.zhaoweihao.hnuplus.R
 
+
 /**
- * Created by Administrator on 2017/11/9.
+ * Created by ZhaoWeihao on 2017/11/9.
  */
 
 /**
@@ -35,6 +37,7 @@ class PostAdapter(private val mPostList: List<Post>,private val disableCode: Int
         var postAuthor = view.findViewById<TextView>(R.id.tv_author)
         var postContent = view.findViewById<TextView>(R.id.tv_content)
         var postImage = view.findViewById<ImageView>(R.id.iv_post)
+        var postTime = view.findViewById<TextView>(R.id.tv_time)
         var postView: View = view
     }
 
@@ -42,11 +45,13 @@ class PostAdapter(private val mPostList: List<Post>,private val disableCode: Int
         if (mContext == null) {
             mContext = parent.context
         }
+        Log.d("PA","OCV")
         val view = LayoutInflater.from(mContext)
                 .inflate(R.layout.posts_item, parent, false)
         val holder = ViewHolder(view)
         when(disable){
             1 -> {
+
                 holder.postView.setOnClickListener {
                     val position = holder.adapterPosition
                     val post = mPostList[position]
@@ -69,6 +74,7 @@ class PostAdapter(private val mPostList: List<Post>,private val disableCode: Int
                     intent.putExtra("imageUrl", post.image!!.fileUrl)
                     (mContext as MainActivity).startActivity(intent)
                 }
+
             }
 
             0 -> {
@@ -77,6 +83,7 @@ class PostAdapter(private val mPostList: List<Post>,private val disableCode: Int
                 }
             }
         }
+
         return holder
     }
 
@@ -84,6 +91,10 @@ class PostAdapter(private val mPostList: List<Post>,private val disableCode: Int
         val post = mPostList[position]
         holder.postAuthor.text = post.author!!.username
         holder.postContent.text = post.content
+        holder.postTime.text = post.createdAt
+
+        Log.d("PA","OBH")
+
         if (post.image == null) {
             Glide.clear(holder.postImage)
             holder.postImage.visibility = View.GONE

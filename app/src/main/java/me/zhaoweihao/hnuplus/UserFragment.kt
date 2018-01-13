@@ -1,30 +1,33 @@
 package me.zhaoweihao.hnuplus
 
-import android.app.ProgressDialog
+import android.app.Fragment
 import android.content.Intent
 
 import android.os.Bundle
 
-import android.support.v4.app.Fragment
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 
 import cn.bmob.v3.BmobUser
+import com.taishi.flipprogressdialog.FlipProgressDialog
 import kotlinx.android.synthetic.main.user_layout.*
 
 import me.zhaoweihao.hnuplus.Bmob.MyUser
+import me.zhaoweihao.hnuplus.Utils.Utility
 
 
 /**
- * Created by Administrator on 2017/11/9.
+ * Created by ZhaoWeihao on 2017/11/9.
  */
 
 class UserFragment : Fragment() {
 
     private var userInfo: MyUser? = null
-    private var progressDialog: ProgressDialog? = null
+
+    private var flipProgressDialog:FlipProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,11 +42,8 @@ class UserFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        flipProgressDialog = Utility.myDialog()
         btn_signout!!.setOnClickListener {
-            progressDialog = ProgressDialog(activity)
-            progressDialog!!.setMessage("Loading...")
-            progressDialog!!.setCancelable(true)
-            progressDialog!!.show()
             BmobUser.logOut()
             val currentUser = BmobUser.getCurrentUser()
             if (currentUser == null) {
@@ -51,7 +51,6 @@ class UserFragment : Fragment() {
                 tv_signinstatus!!.text = "You have not signin"
                 btn_signin_1!!.visibility = View.VISIBLE
                 btn_signout!!.visibility = View.GONE
-                progressDialog!!.hide()
             }
         }
 
@@ -63,18 +62,12 @@ class UserFragment : Fragment() {
 
     override fun onPause() {
         super.onPause()
-        if (progressDialog != null) {
-            progressDialog!!.dismiss()
-            progressDialog = null
-        }
+
     }
 
     override fun onStart() {
         super.onStart()
-        progressDialog = ProgressDialog(activity)
-        progressDialog!!.setMessage("Loading...")
-        progressDialog!!.setCancelable(true)
-        progressDialog!!.show()
+       flipProgressDialog!!.show(fragmentManager,"")
 
         userInfo = BmobUser.getCurrentUser(MyUser::class.java)
         //If userInfo is not null,it means the user login successfully
@@ -82,12 +75,12 @@ class UserFragment : Fragment() {
             tv_signinstatus!!.text = "Welcome " + userInfo!!.username
             btn_signin_1!!.visibility = View.GONE
             btn_signout!!.visibility = View.VISIBLE
-            progressDialog!!.hide()
+            flipProgressDialog!!.dismiss()
         } else {
             tv_signinstatus!!.text = "You have not signin"
             btn_signin_1!!.visibility = View.VISIBLE
             btn_signout!!.visibility = View.GONE
-            progressDialog!!.hide()
+            flipProgressDialog!!.dismiss()
         }
 
     }

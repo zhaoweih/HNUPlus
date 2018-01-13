@@ -1,14 +1,15 @@
 package me.zhaoweihao.hnuplus
 
+import android.app.FragmentManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.FragmentManager
+import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_comment.*
 import me.zhaoweihao.hnuplus.Interface.CommentInterface
 
 class CommentActivity : AppCompatActivity() {
 
-    private var fragmentManager: FragmentManager? = null
+
     private var commentFragment: CommentFragment? = null
     private var listener: CommentInterface? = null
 
@@ -16,7 +17,10 @@ class CommentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_comment)
 
-        fragmentManager = supportFragmentManager
+        title = "Comment"
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
+
         // Open a Fragment transaction
         val transaction = (fragmentManager as FragmentManager?)!!.beginTransaction()
         if (commentFragment == null) {
@@ -35,6 +39,13 @@ class CommentActivity : AppCompatActivity() {
 
     fun setListener(listener: CommentInterface) {
         this.listener = listener
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> finish()
+        }
+        return true
     }
 
 }

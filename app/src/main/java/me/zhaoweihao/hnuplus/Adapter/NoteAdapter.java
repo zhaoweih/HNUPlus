@@ -21,7 +21,7 @@ import me.zhaoweihao.hnuplus.NoteEditActivity;
 import me.zhaoweihao.hnuplus.R;
 
 /**
- * Created by Administrator on 2018/1/10.
+ * Created by ZhaoWeihao on 2018/1/10.
  */
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
@@ -50,8 +50,6 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
         }
 
     }
-
-
 
     @Override
     public NoteAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

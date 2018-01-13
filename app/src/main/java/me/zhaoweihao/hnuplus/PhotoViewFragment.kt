@@ -1,7 +1,7 @@
 package me.zhaoweihao.hnuplus
 
+import android.app.Fragment
 import android.os.Bundle
-import android.support.v4.app.Fragment
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.photo_view_layout.*
 
 /**
- * Created by Administrator on 2017/12/3.
+ * Created by ZhaoWeihao on 2017/12/3.
  */
 class PhotoViewFragment :  Fragment() {
 

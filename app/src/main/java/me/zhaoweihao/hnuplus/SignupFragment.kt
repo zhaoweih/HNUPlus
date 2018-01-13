@@ -1,9 +1,8 @@
 package me.zhaoweihao.hnuplus
 
-import android.app.ProgressDialog
+import android.app.Fragment
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,17 +11,19 @@ import android.widget.Toast
 import cn.bmob.v3.BmobUser
 import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.SaveListener
+import com.taishi.flipprogressdialog.FlipProgressDialog
 import kotlinx.android.synthetic.main.signup_layout.*
 import me.zhaoweihao.hnuplus.Bmob.MyUser
+import me.zhaoweihao.hnuplus.Utils.Utility
 
 /**
- * Created by Administrator on 2017/11/10.
+ * Created by ZhaoWeihao on 2017/11/10.
  */
 
 class SignupFragment : Fragment() {
 
     private var anim: AnimationDrawable? = null
-    private var progressDialog: ProgressDialog? = null
+    private var flipProgressDialog:FlipProgressDialog? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -38,6 +39,8 @@ class SignupFragment : Fragment() {
         anim!!.setEnterFadeDuration(6000)
         anim!!.setExitFadeDuration(2000)
 
+        flipProgressDialog=Utility.myDialog()
+
         btn_signup_2!!.setOnClickListener {
             val username = et_username_2!!.text.toString()
             val password = et_password_2!!.text.toString()
@@ -49,10 +52,7 @@ class SignupFragment : Fragment() {
             } else if (password != passwordConfirm) {
                 Toast.makeText(activity, "confirm password is not match with password", Toast.LENGTH_SHORT).show()
             } else {
-                progressDialog = ProgressDialog(activity)
-                progressDialog!!.setMessage("Loading...")
-                progressDialog!!.setCancelable(true)
-                progressDialog!!.show()
+                flipProgressDialog!!.show(fragmentManager,"")
 
                 val bu = BmobUser()
                 bu.username = username
@@ -69,24 +69,22 @@ class SignupFragment : Fragment() {
                                 override fun done(bmobUser: BmobUser, e: BmobException?) {
                                     if (e == null) {
                                         Toast.makeText(activity, "signin successfully", Toast.LENGTH_SHORT).show()
-                                        progressDialog!!.dismiss()
+                                        flipProgressDialog!!.dismiss()
                                         activity.finish()
                                     } else {
                                         Toast.makeText(activity, "signin failed", Toast.LENGTH_SHORT).show()
-                                        progressDialog!!.hide()
+                                        flipProgressDialog!!.dismiss()
                                     }
                                 }
                             })
                         } else {
                             Toast.makeText(activity, "signup failed", Toast.LENGTH_SHORT).show()
-                            progressDialog!!.hide()
+                            flipProgressDialog!!.dismiss()
                         }
                     }
                 })
             }
         }
-
-        btn_back_2!!.setOnClickListener { activity.finish() }
     }
 
     override fun onResume() {
@@ -99,10 +97,6 @@ class SignupFragment : Fragment() {
         super.onPause()
         if (anim != null && anim!!.isRunning) {
             anim!!.stop()
-        }
-        if (progressDialog != null) {
-            progressDialog!!.dismiss()
-            progressDialog = null
         }
     }
 

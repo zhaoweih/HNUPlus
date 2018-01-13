@@ -7,7 +7,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_avatar_placeholder"
+            android:src="@drawable/avatar"
             android:layout_gravity="center"
             android:layout_margin="30dp"
             />
@@ -22,18 +22,18 @@
         <Button
             android:id="@+id/btn_signin_1"
             android:layout_gravity="center"
-            android:layout_width="350dp"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
             android:textColor="@color/white"
             android:layout_marginBottom="15dp"
+            android:background="@drawable/button_background"
             android:text="signin"/>
         <Button
             android:id="@+id/btn_signout"
             android:layout_gravity="center"
-            android:layout_width="350dp"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@drawable/button_background"
             android:textColor="@color/white"
             android:text="signout"/>
 

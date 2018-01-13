@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_avatar_placeholder"
+            android:src="@drawable/avatar"
             android:layout_gravity="center"
             android:layout_margin="30dp"
             />
@@ -67,22 +67,14 @@
 
         <Button
             android:id="@+id/btn_signup_2"
+            android:layout_marginTop="25dp"
             android:layout_gravity="center"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:textColor="@color/white"
-            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_background3"
+            android:textColor="@color/colorPrimary"
             android:text="signup"/>
 
-        <Button
-            android:id="@+id/btn_back_2"
-            android:layout_gravity="center"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:textColor="@color/white"
-            android:text="back"/>
 
     </LinearLayout>
 

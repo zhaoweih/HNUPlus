@@ -1,10 +1,11 @@
 package me.zhaoweihao.hnuplus
 
+import android.app.FragmentManager
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.support.v4.app.FragmentManager
+
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -16,7 +17,6 @@ import me.zhaoweihao.hnuplus.Interface.PostInterface
 
 class PostActivity : AppCompatActivity() {
 
-    private var fragmentManager: FragmentManager? = null
     private var postFragment: PostFragment? = null
     public var path: String? = null
 
@@ -26,7 +26,9 @@ class PostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post)
         setSupportActionBar(my_toolbar)
-        fragmentManager = supportFragmentManager
+        title = "Post"
+        val actionBar = supportActionBar
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
         // Open a Fragment transaction
         val transaction = (fragmentManager as FragmentManager?)!!.beginTransaction()
         if (postFragment == null) {
@@ -76,16 +78,10 @@ class PostActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.getItemId()) {
-            R.id.action_submit ->{
-                listener!!.myMethod()
-                return true
-            }
-
-            else ->
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item)
+            R.id.action_submit -> listener!!.myMethod()
+            android.R.id.home -> finish()
         }
+        return true
     }
 
 }

@@ -8,6 +8,7 @@
     app:cardCornerRadius="4dp"
     android:elevation="5dp"
     android:layout_marginTop="15dp"
+    android:minHeight="180dp"
     >
 
     <LinearLayout
@@ -23,9 +24,9 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_avatar_placeholder"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/avatar"
                 />
 
             <TextView
@@ -70,26 +71,15 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="end"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="end|center"
             >
-            <FrameLayout
+            <TextView
+                android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@color/moreWhiteGrey"
-                    />
-
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_comment_whitegrey_24dp"
-                    />
-
-            </FrameLayout>
+                android:layout_height="wrap_content"
+                />
 
         </LinearLayout>
 

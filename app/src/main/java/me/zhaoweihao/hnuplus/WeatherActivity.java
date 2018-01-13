@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.pwittchen.weathericonview.WeatherIconView;
+import com.taishi.flipprogressdialog.FlipProgressDialog;
 import com.tencent.map.geolocation.TencentLocation;
 import com.tencent.map.geolocation.TencentLocationListener;
 import com.tencent.map.geolocation.TencentLocationManager;
@@ -75,11 +76,18 @@ public class WeatherActivity extends AppCompatActivity implements TencentLocatio
     private String latitudeStr,longitudeStr,addressStr;
     private int icon;
 
+    private FlipProgressDialog flipProgressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         ButterKnife.bind(this);
+
+        flipProgressDialog=Utility.myDialog();
+
+        flipProgressDialog.show(getFragmentManager(),"");
+
         if (Build.VERSION.SDK_INT >= 23) {
             String[] permissions = {
                     Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -190,6 +198,8 @@ public class WeatherActivity extends AppCompatActivity implements TencentLocatio
             low.setText(lowStr);
             forecastLayout.addView(view);
         }
+
+        flipProgressDialog.dismiss();
     }
 
     private void setWeatherIcon(String code) {

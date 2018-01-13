@@ -1,10 +1,9 @@
 package me.zhaoweihao.hnuplus
 
 
+import android.app.Fragment
 import android.content.Intent
 import android.os.Bundle
-
-import android.support.v4.app.Fragment
 
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +12,7 @@ import kotlinx.android.synthetic.main.more_layout.*
 
 
 /**
- * Created by Administrator on 2017/11/9.
+ * Created by ZhaoWeihao on 2017/11/9.
  */
 
 

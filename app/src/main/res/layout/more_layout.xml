@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:background="@color/hotbgcolor"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="20dp"
     >
 
     <LinearLayout
@@ -16,9 +16,9 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/weather" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,9 +37,9 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/note" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,9 +58,9 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/translate" />
 
         <TextView
             android:layout_width="wrap_content"
