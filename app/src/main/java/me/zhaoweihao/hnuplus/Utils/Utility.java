@@ -2,6 +2,7 @@ package me.zhaoweihao.hnuplus.Utils;
 
 import com.google.gson.Gson;
 
+import me.zhaoweihao.hnuplus.Gson.Translate;
 import me.zhaoweihao.hnuplus.Gson.Weather;
 
 
@@ -19,6 +20,19 @@ public class Utility {
             e.printStackTrace();
         }
             return null;
+    }
+
+    public static Translate handleTranslateResponse(String response){
+        try{
+            Gson gson=new Gson();
+            Translate translate=gson.fromJson(response,Translate.class);
+            return translate;
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return null;
+
     }
 
 }

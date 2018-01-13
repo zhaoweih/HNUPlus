@@ -39,10 +39,10 @@ class MoreFragment : Fragment() {
             startActivity(intent)
         }
 
-//        ll_to_translate.setOnClickListener {
-//            val intent = Intent(activity,TranslateActivity::class.java)
-//            startActivity(intent)
-//        }
+        ll_to_translate.setOnClickListener {
+            val intent = Intent(activity,TranslateActivity::class.java)
+            startActivity(intent)
+        }
         }
 
     }

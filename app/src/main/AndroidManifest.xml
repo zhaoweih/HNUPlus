@@ -55,8 +55,10 @@
         <activity android:name=".NoteActivity">
 
         </activity>
-        <activity android:name=".TestActivity"></activity>
         <activity android:name=".NoteEditActivity"></activity>
+        <activity android:name=".TranslateActivity">
+
+        </activity>
     </application>
 
 </manifest>

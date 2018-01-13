@@ -23,4 +23,5 @@
     <color name="dk_blue">#006ded</color>
     <!-- Weather UI colors -->
     <color name="my_green">#00B0C0</color>
+    <color name="mgery">#EEEEEE</color>
 </resources>
