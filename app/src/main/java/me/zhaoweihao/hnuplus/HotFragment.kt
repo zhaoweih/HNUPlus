@@ -50,7 +50,7 @@ class HotFragment : Fragment(), HotInterface {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        loadData()
+//        loadData()
 
         pull_to_refresh!!.setOnRefreshListener { loadData() }
 

@@ -32,7 +32,13 @@
             android:name="TencentMapSDK"
             android:value="YBYBZ-HFJRF-WVPJC-JK4ID-DRF57-CTFJ2" />
 
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".PostActivity"
             android:theme="@style/MyTheme" />
@@ -44,11 +50,7 @@
             android:name=".PhotoViewActivity"
             android:theme="@style/Theme.AppTheme.TranslucentStatusBar" />
         <activity android:name=".WeatherActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".NoteActivity">
 

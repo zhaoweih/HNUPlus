@@ -40,7 +40,7 @@ public class NoteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
-        Bmob.initialize(this,"a15e40755375ee7434e6be8c000c184b");
+//        Bmob.initialize(this,"a15e40755375ee7434e6be8c000c184b");
 
         ButterKnife.bind(this);
 

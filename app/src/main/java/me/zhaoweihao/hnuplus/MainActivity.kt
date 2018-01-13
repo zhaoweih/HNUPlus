@@ -29,8 +29,8 @@ import android.app.ProgressDialog
 
 
 /**
- * Created by zhaoweihaoChina on 2017/11/9.
- * github:https://github.com/zhaoweihaoChina
+ * Created by ZhaoWeihao on 2017/11/9.
+ * Github:https://github.com/zhaoweihaoChina
  */
 class MainActivity : AppCompatActivity(){
 
@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity(){
      * Four Fragment for display
      */
     private var hotFragment: HotFragment? = null
-    private var contactsFragment: ContactsFragment? = null
-    private var newsFragment: NewsFragment? = null
+    private var moreFragment: MoreFragment? = null
+//    private var newsFragment: NewsFragment? = null
     private var userFragment: UserFragment? = null
 
     /**
@@ -70,9 +70,9 @@ class MainActivity : AppCompatActivity(){
 
     private fun bindListener() {
         hot_layout!!.setOnClickListener{setTabSelection(0)}
-        contacts_layout!!.setOnClickListener{setTabSelection(1)}
-        news_layout!!.setOnClickListener{setTabSelection(2)}
-        user_layout!!.setOnClickListener{setTabSelection(3)}
+        more_layout!!.setOnClickListener{setTabSelection(1)}
+//        news_layout!!.setOnClickListener{setTabSelection(2)}
+        user_layout!!.setOnClickListener{setTabSelection(2)}
     }
 
     /**
@@ -101,26 +101,26 @@ class MainActivity : AppCompatActivity(){
                 }
             }
             1 -> {
-                contacts_image!!.setImageResource(R.drawable.ic_home_black_24dp)
-                contacts_text!!.setTextColor(Color.WHITE)
-                if (contactsFragment == null) {
-                    contactsFragment = ContactsFragment()
-                    transaction.add(R.id.content, contactsFragment)
+                more_image!!.setImageResource(R.drawable.ic_home_black_24dp)
+                more_text!!.setTextColor(Color.WHITE)
+                if (moreFragment == null) {
+                    moreFragment = MoreFragment()
+                    transaction.add(R.id.content, moreFragment)
                 } else {
-                    transaction.show(contactsFragment)
+                    transaction.show(moreFragment)
                 }
             }
+//            2 -> {
+//                news_image!!.setImageResource(R.drawable.ic_home_black_24dp)
+//                news_text!!.setTextColor(Color.WHITE)
+//                if (newsFragment == null) {
+//                    newsFragment = NewsFragment()
+//                    transaction.add(R.id.content, newsFragment)
+//                } else {
+//                    transaction.show(newsFragment)
+//                }
+//            }
             2 -> {
-                news_image!!.setImageResource(R.drawable.ic_home_black_24dp)
-                news_text!!.setTextColor(Color.WHITE)
-                if (newsFragment == null) {
-                    newsFragment = NewsFragment()
-                    transaction.add(R.id.content, newsFragment)
-                } else {
-                    transaction.show(newsFragment)
-                }
-            }
-            3 -> {
                 user_image!!.setImageResource(R.drawable.ic_home_black_24dp)
                 user_text!!.setTextColor(Color.WHITE)
                 if (userFragment == null) {
@@ -140,10 +140,10 @@ class MainActivity : AppCompatActivity(){
     private fun clearSelection() {
         hot_image!!.setImageResource(R.drawable.ic_home_grey_24dp)
         hot_text!!.setTextColor(Color.parseColor("#82858b"))
-        contacts_image!!.setImageResource(R.drawable.ic_home_grey_24dp)
-        contacts_text!!.setTextColor(Color.parseColor("#82858b"))
-        news_image!!.setImageResource(R.drawable.ic_home_grey_24dp)
-        news_text!!.setTextColor(Color.parseColor("#82858b"))
+        more_image!!.setImageResource(R.drawable.ic_home_grey_24dp)
+        more_text!!.setTextColor(Color.parseColor("#82858b"))
+//        news_image!!.setImageResource(R.drawable.ic_home_grey_24dp)
+//        news_text!!.setTextColor(Color.parseColor("#82858b"))
         user_image!!.setImageResource(R.drawable.ic_home_grey_24dp)
         user_text!!.setTextColor(Color.parseColor("#82858b"))
     }
@@ -155,12 +155,12 @@ class MainActivity : AppCompatActivity(){
         if (hotFragment != null) {
             transaction.hide(hotFragment)
         }
-        if (contactsFragment != null) {
-            transaction.hide(contactsFragment)
+        if (moreFragment != null) {
+            transaction.hide(moreFragment)
         }
-        if (newsFragment != null) {
-            transaction.hide(newsFragment)
-        }
+//        if (newsFragment != null) {
+//            transaction.hide(newsFragment)
+//        }
         if (userFragment != null) {
             transaction.hide(userFragment)
         }
