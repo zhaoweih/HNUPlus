@@ -15,14 +15,12 @@
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="09 Jan 2018"
             android:textSize="@dimen/weather_normal_text_size"
             />
         <TextView
             android:id="@+id/day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tue"
             android:textSize="@dimen/weather_normal_text_size"
             />
     </LinearLayout>
@@ -38,7 +36,6 @@
             android:id="@+id/status_forecast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shower"
             android:textSize="@dimen/weather_normal_text_size"
             />
     </LinearLayout>

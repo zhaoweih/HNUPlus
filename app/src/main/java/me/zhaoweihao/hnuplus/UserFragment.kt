@@ -47,8 +47,8 @@ class UserFragment : Fragment() {
             BmobUser.logOut()
             val currentUser = BmobUser.getCurrentUser()
             if (currentUser == null) {
-                Toast.makeText(activity, "sign out successfully", Toast.LENGTH_SHORT).show()
-                tv_signinstatus!!.text = "You have not signin"
+                Toast.makeText(activity, getString(R.string.signout_success), Toast.LENGTH_SHORT).show()
+                tv_signinstatus!!.text = getString(R.string.not_signin_warn)
                 btn_signin_1!!.visibility = View.VISIBLE
                 btn_signout!!.visibility = View.GONE
             }
@@ -77,7 +77,7 @@ class UserFragment : Fragment() {
             btn_signout!!.visibility = View.VISIBLE
             flipProgressDialog!!.dismiss()
         } else {
-            tv_signinstatus!!.text = "You have not signin"
+            tv_signinstatus!!.text = getString(R.string.not_signin_warn)
             btn_signin_1!!.visibility = View.VISIBLE
             btn_signout!!.visibility = View.GONE
             flipProgressDialog!!.dismiss()

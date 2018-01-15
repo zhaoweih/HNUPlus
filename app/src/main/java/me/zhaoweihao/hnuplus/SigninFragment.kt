@@ -53,7 +53,7 @@ class SigninFragment : Fragment() {
             val password = et_password_1!!.text.toString()
 
             if (username == "" || password == "") {
-                Toast.makeText(activity, "can't be empty", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.can_be_empty), Toast.LENGTH_SHORT).show()
             } else {
 
                 flipProgressDialog!!.show(fragmentManager,"")
@@ -65,11 +65,11 @@ class SigninFragment : Fragment() {
 
                     override fun done(bmobUser: BmobUser, e: BmobException?) {
                         if (e == null) {
-                            Toast.makeText(activity, "signin successfully", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity, getString(R.string.signin_success), Toast.LENGTH_SHORT).show()
                             flipProgressDialog!!.dismiss()
                             activity.finish()
                         } else {
-                            Toast.makeText(activity, "signin failed", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity, getString(R.string.signin_failed), Toast.LENGTH_SHORT).show()
                             flipProgressDialog!!.dismiss()
                         }
                     }

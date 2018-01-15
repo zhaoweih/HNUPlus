@@ -26,7 +26,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:met_floatingLabel="highlight"
-            android:hint="Your username"
+            android:hint="@string/your_username"
             app:met_textColor="@color/white"
             app:met_floatingLabelTextSize="15sp"
             />
@@ -36,7 +36,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:met_floatingLabel="highlight"
-            android:hint="Your password"
+            android:hint="@string/your_password"
             app:met_textColor="@color/white"
             app:met_floatingLabelTextSize="15sp"
             />
@@ -47,7 +47,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:met_floatingLabel="highlight"
-            android:hint="Confirm your password"
+            android:hint="@string/confirm_your_password"
             app:met_textColor="@color/white"
             app:met_floatingLabelTextSize="15sp"
             />
@@ -58,7 +58,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:met_floatingLabel="highlight"
-            android:hint="Your email   (optional)"
+            android:hint="@string/your_email_optional"
             app:met_textColor="@color/white"
             app:met_floatingLabelTextSize="15sp"
             android:layout_marginBottom="15dp"
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_background3"
             android:textColor="@color/colorPrimary"
-            android:text="signup"/>
+            android:text="@string/signup"/>
 
 
     </LinearLayout>

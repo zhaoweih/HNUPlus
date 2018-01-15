@@ -111,10 +111,10 @@ public class CommentFragment extends Fragment implements CommentInterface {
             public void onClick(View v) {
 
                 AlertDialog.Builder dialog = new AlertDialog.Builder (getActivity());
-                dialog.setTitle("Are you sure to delete this post?");
-                dialog.setMessage("This can not be restored");
+                dialog.setTitle(R.string.comment_delete_title);
+                dialog.setMessage(R.string.comment_delete_message);
                 dialog.setCancelable(false);
-                dialog.setPositiveButton("OK,I am sure", new DialogInterface.OnClickListener() {
+                dialog.setPositiveButton(R.string.comment_sure, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Post p = new Post();
@@ -123,17 +123,17 @@ public class CommentFragment extends Fragment implements CommentInterface {
                             @Override
                             public void done(BmobException e) {
                                 if(e==null){
-                                    Toast.makeText(getActivity(), "delete successfully", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), R.string.delete_success, Toast.LENGTH_SHORT).show();
                                     getActivity().finish();
                                 }else{
-                                    Toast.makeText(getActivity(), "delete failed", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), R.string.delete_failed, Toast.LENGTH_SHORT).show();
                                 }
                             }
 
                         });
                     }
                 });
-                dialog.setNegativeButton("No,I want cancel", new DialogInterface.OnClickListener() {
+                dialog.setNegativeButton(R.string.delete_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -182,7 +182,7 @@ public class CommentFragment extends Fragment implements CommentInterface {
 
         if(user==null){
 
-            Snackbar.make(recyclerView,"You are not signin",Snackbar.LENGTH_SHORT)
+            Snackbar.make(recyclerView, R.string.not_signin_text,Snackbar.LENGTH_SHORT)
                     .setAction("Sign in", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -193,7 +193,7 @@ public class CommentFragment extends Fragment implements CommentInterface {
 
         }else if(data.equals("")){
 
-            Toast.makeText(getActivity(), "Comment content can't be empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), R.string.empty_text, Toast.LENGTH_SHORT).show();
 
         }else{
 
@@ -211,10 +211,10 @@ public class CommentFragment extends Fragment implements CommentInterface {
                 public void done(String objectId,BmobException e) {
                     if(e==null){
                         refreshCommentData(objectID);
-                        Toast.makeText(getActivity(), "add commit successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), R.string.add_commit_success, Toast.LENGTH_SHORT).show();
 
                     }else{
-                        Toast.makeText(getActivity(), "add commit failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), R.string.add_commit_failed, Toast.LENGTH_SHORT).show();
                     }
                 }
 

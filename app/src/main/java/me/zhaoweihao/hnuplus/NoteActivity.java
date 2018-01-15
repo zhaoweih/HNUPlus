@@ -49,7 +49,7 @@ public class NoteActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        setTitle("Note");
+        setTitle(getString(R.string.note_title));
 
         updateData();
 
@@ -92,7 +92,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     public void showDeleteDialog(final String objectID){
-        String [] strings = new String[]{"Delete"};
+        String [] strings = new String[]{getString(R.string.delete_warn)};
         new AlertDialog.Builder(this)
                 .setItems(strings, new DialogInterface.OnClickListener() {
                     @Override
@@ -104,10 +104,10 @@ public class NoteActivity extends AppCompatActivity {
                                 @Override
                                 public void done(BmobException e) {
                                     if(e==null){
-                                        Toast.makeText(NoteActivity.this, "delete successfully", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(NoteActivity.this, R.string.delete_success, Toast.LENGTH_SHORT).show();
                                         updateData();
                                     } else {
-                                        Toast.makeText(NoteActivity.this, "delete failed", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(NoteActivity.this, R.string.delete_failed, Toast.LENGTH_SHORT).show();
                                     }
 
                                 }

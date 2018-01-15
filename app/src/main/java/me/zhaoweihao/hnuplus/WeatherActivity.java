@@ -34,8 +34,7 @@ import okhttp3.Response;
 
 public class WeatherActivity extends AppCompatActivity implements TencentLocationListener{
 
-    @BindView(R.id.location)
-    TextView location;
+
     @BindView(R.id.status)
     TextView status;
     @BindView(R.id.degree)

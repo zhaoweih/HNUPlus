@@ -26,7 +26,7 @@ class PostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post)
         setSupportActionBar(my_toolbar)
-        title = "Post"
+        title = getString(R.string.post_title)
         val actionBar = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
         // Open a Fragment transaction

@@ -15,7 +15,7 @@
             android:id="@+id/tv_signinstatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You are not signin"
+            android:text="@string/you_are_not_signin"
             android:layout_gravity="center"
             android:layout_margin="30dp"
             />
@@ -27,7 +27,7 @@
             android:textColor="@color/white"
             android:layout_marginBottom="15dp"
             android:background="@drawable/button_background"
-            android:text="signin"/>
+            android:text="@string/signin"/>
         <Button
             android:id="@+id/btn_signout"
             android:layout_gravity="center"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
             android:textColor="@color/white"
-            android:text="signout"/>
+            android:text="@string/signout"/>
 
 </LinearLayout>
 

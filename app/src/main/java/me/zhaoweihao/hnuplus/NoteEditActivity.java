@@ -32,7 +32,7 @@ public class NoteEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_edit);
         ButterKnife.bind(this);
-        setTitle("Edit");
+        setTitle(getString(R.string.edit_title));
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -78,10 +78,10 @@ public class NoteEditActivity extends AppCompatActivity {
                     @Override
                     public void done(String s, BmobException e) {
                         if(e==null){
-                            Toast.makeText(NoteEditActivity.this, "save successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(NoteEditActivity.this, R.string.save_success, Toast.LENGTH_SHORT).show();
                             finish();
                         }else{
-                            Toast.makeText(NoteEditActivity.this, "save failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(NoteEditActivity.this, R.string.save_failed, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -97,10 +97,10 @@ public class NoteEditActivity extends AppCompatActivity {
                     @Override
                     public void done(BmobException e) {
                         if(e==null){
-                            Toast.makeText(NoteEditActivity.this, "update successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(NoteEditActivity.this, R.string.update_success, Toast.LENGTH_SHORT).show();
                             finish();
                         }else {
-                            Toast.makeText(NoteEditActivity.this, "save failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(NoteEditActivity.this, R.string.save_failed, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

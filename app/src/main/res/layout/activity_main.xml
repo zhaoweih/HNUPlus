@@ -47,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Community"
+                    android:text="@string/community"
                     android:textColor="@color/white" />
             </LinearLayout>
         </RelativeLayout>
@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="More"
+                    android:text="@string/more"
                     android:textColor="@color/white" />
             </LinearLayout>
         </RelativeLayout>
@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="User"
+                    android:text="@string/user"
                     android:textColor="@color/white" />
             </LinearLayout>
         </RelativeLayout>

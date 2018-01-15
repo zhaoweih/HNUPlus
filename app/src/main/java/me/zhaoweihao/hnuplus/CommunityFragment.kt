@@ -64,7 +64,7 @@ class CommunityFragment : Fragment(), Communitynterface {
                 (activity as MainActivity).gotoPostFragment()
             } else {
                 //show a snackbar to tell you to sign in
-                Snackbar.make(fb!!, "You are not signin", Snackbar.LENGTH_SHORT)
+                Snackbar.make(fb!!, R.string.not_signin_text, Snackbar.LENGTH_SHORT)
                         .setAction("Sign in") {
                             val intent = Intent(activity, SigninActivity::class.java)
                             startActivity(intent)
@@ -112,11 +112,11 @@ class CommunityFragment : Fragment(), Communitynterface {
                             rv_posts!!.layoutManager = layoutManager
                             adapter = PostAdapter(`object`,1)
                             rv_posts!!.adapter = adapter
-                            Snackbar.make(rv_posts!!, "refresh successfully", Snackbar.LENGTH_SHORT).show()
+                            Snackbar.make(rv_posts!!, R.string.refresh_success, Snackbar.LENGTH_SHORT).show()
                             pull_to_refresh!!.setRefreshing(false)
 
                         } else {
-                            Snackbar.make(rv_posts!!, "refresh failed", Snackbar.LENGTH_SHORT).show()
+                            Snackbar.make(rv_posts!!, R.string.refresh_failed, Snackbar.LENGTH_SHORT).show()
                             pull_to_refresh!!.setRefreshing(false)
                         }
                     }
@@ -136,7 +136,7 @@ class CommunityFragment : Fragment(), Communitynterface {
                 rv_posts!!.layoutManager = layoutManager
                 adapter = PostAdapter(postList,0)
                 rv_posts!!.adapter = adapter
-                Snackbar.make(rv_posts!!, "please check your network status", Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(rv_posts!!, getString(R.string.check_network_status), Snackbar.LENGTH_SHORT).show()
                 pull_to_refresh!!.setRefreshing(false)
             }
 
@@ -146,7 +146,7 @@ class CommunityFragment : Fragment(), Communitynterface {
 
     private fun loadData(){
         //check network status
-        val conMgr = connectivityManager(context)
+        val conMgr = connectivityManager(activity)
         val activeNetwork = conMgr.activeNetworkInfo
         if (activeNetwork != null && activeNetwork.isConnected) {
             // notify user online and load online data

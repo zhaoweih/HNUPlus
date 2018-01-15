@@ -48,9 +48,9 @@ class SignupFragment : Fragment() {
             val email = et_email!!.text.toString()
 
             if (username == "" || password == "" || email == "" || passwordConfirm == "") {
-                Toast.makeText(activity, "can't be empty", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, R.string.empty_text_warn, Toast.LENGTH_SHORT).show()
             } else if (password != passwordConfirm) {
-                Toast.makeText(activity, "confirm password is not match with password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.confirm_pwd_not_pwd), Toast.LENGTH_SHORT).show()
             } else {
                 flipProgressDialog!!.show(fragmentManager,"")
 
@@ -62,23 +62,23 @@ class SignupFragment : Fragment() {
                 bu.signUp(object : SaveListener<MyUser>() {
                     override fun done(s: MyUser, e: BmobException?) {
                         if (e == null) {
-                            Toast.makeText(activity, "signup successfully", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity, getString(R.string.signup_success), Toast.LENGTH_SHORT).show()
                             //Auto login after login successfully
                             bu.login(object : SaveListener<BmobUser>() {
 
                                 override fun done(bmobUser: BmobUser, e: BmobException?) {
                                     if (e == null) {
-                                        Toast.makeText(activity, "signin successfully", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(activity, R.string.signin_success, Toast.LENGTH_SHORT).show()
                                         flipProgressDialog!!.dismiss()
                                         activity.finish()
                                     } else {
-                                        Toast.makeText(activity, "signin failed", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(activity, R.string.signin_failed, Toast.LENGTH_SHORT).show()
                                         flipProgressDialog!!.dismiss()
                                     }
                                 }
                             })
                         } else {
-                            Toast.makeText(activity, "signup failed", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity, getString(R.string.signup_failed), Toast.LENGTH_SHORT).show()
                             flipProgressDialog!!.dismiss()
                         }
                     }

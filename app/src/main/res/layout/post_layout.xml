@@ -11,7 +11,7 @@
     android:layout_height="150dp"
     android:gravity="top"
     android:background="@null"
-    android:hint="How was your day?"
+    android:hint="@string/how_was_your_day"
     android:layout_marginTop="10dp"
     />
 
@@ -40,7 +40,7 @@
             android:id="@+id/tv_add_pic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add a picture"
+            android:text="@string/add_a_picture"
             android:textColor="@color/sendButtonColor"
             android:textSize="16sp"
             android:layout_below="@id/btn_pic"

@@ -29,7 +29,6 @@
             android:minHeight="90dp"
             android:maxHeight="180dp"
             android:layout_margin="10dp"
-            android:text="text"
             />
 
 </android.support.v7.widget.CardView>

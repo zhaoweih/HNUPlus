@@ -167,7 +167,7 @@ class MainActivity : AppCompatActivity(){
                 if(returnedPath == null){
                     //check the receive data is empty or not
                     if (returnedData == "") {
-                        Toast.makeText(this, "empty text", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, getString(R.string.empty_text_warn), Toast.LENGTH_SHORT).show()
                     } else {
                         //send data to server via bmob sdk
                         val user = BmobUser.getCurrentUser(MyUser::class.java)
@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity(){
                             override fun done(objectId: String, e: BmobException?) {
                                 if (e == null) {
                                     flipProgressDialog!!.dismiss()
-                                    Toast.makeText(this@MainActivity, "post successfully", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this@MainActivity, getString(R.string.post_success), Toast.LENGTH_SHORT).show()
                                     viewKonfetti.build()
                                             .addColors(Color.parseColor("#fce18a"), Color.parseColor("#ff726d"), Color.parseColor("#b48def"),Color.parseColor("#f4306d"))
                                             .setDirection(0.0, 359.0)
@@ -196,7 +196,7 @@ class MainActivity : AppCompatActivity(){
                                             .stream(300, 5000L)
                                     listener!!.myMethod()
                                 } else {
-                                    Toast.makeText(this@MainActivity, "post failed", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(this@MainActivity, getString(R.string.post_failed), Toast.LENGTH_SHORT).show()
                                 }
                             }
                         })
@@ -207,7 +207,7 @@ class MainActivity : AppCompatActivity(){
                     Log.d("MA",returnedPath)
                     //check the receive data is empty or not
                     if (returnedData == "") {
-                        Toast.makeText(this, "empty text", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, getString(R.string.empty_text_warn), Toast.LENGTH_SHORT).show()
                     } else {
                         //send data to server via bmob sdk
                         val user = BmobUser.getCurrentUser(MyUser::class.java)
@@ -231,11 +231,11 @@ class MainActivity : AppCompatActivity(){
 
                                         override fun done(objectId: String, e: BmobException?) {
                                             if (e == null) {
-                                                Toast.makeText(this@MainActivity, "post successfully", Toast.LENGTH_SHORT).show()
+                                                Toast.makeText(this@MainActivity, getString(R.string.post_success), Toast.LENGTH_SHORT).show()
                                                 flipProgressDialog!!.dismiss()
                                                 listener!!.myMethod()
                                             } else {
-                                                Toast.makeText(this@MainActivity, "post failed", Toast.LENGTH_SHORT).show()
+                                                Toast.makeText(this@MainActivity,  getString(R.string.post_failed), Toast.LENGTH_SHORT).show()
                                             }
                                         }
                                     })

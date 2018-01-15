@@ -33,15 +33,6 @@
             android:orientation="vertical"
             android:layout_margin="15dp"
             >
-            <TextView
-                android:id="@+id/location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Chaozhou, Guangdong, CN"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:visibility="gone"
-                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,7 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FORECAST"
+                android:text="@string/forecast"
                 android:textColor="@color/my_green"
                 />
 
@@ -125,13 +116,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DETAIL"
+                        android:text="@string/detail"
                         android:textColor="@color/my_green"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="WIND"
+                        android:text="@string/wind"
                         android:textSize="@dimen/weather_normal_text_size"
                         />
                     <LinearLayout
@@ -142,14 +133,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="CHILL:"
+                            android:text="@string/chill"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/chill"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="48"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -162,14 +152,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="DIRECTION:"
+                            android:text="@string/direction"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/direction"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="325"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -182,14 +171,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="SPEED:"
+                            android:text="@string/speed"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/speed_detail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="11.27"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -198,7 +186,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ATMOSPHERE"
+                        android:text="@string/atmosphere"
                         android:layout_marginTop="10dp"
                         android:textSize="@dimen/weather_normal_text_size"
                         />
@@ -211,14 +199,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="HUMIDITY:"
+                            android:text="@string/humidity"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/humidity_detail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="48"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -232,14 +219,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="PRESSURE:"
+                            android:text="@string/pressure"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/pressure"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="34439.59"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -252,14 +238,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="RISING:"
+                            android:text="@string/rising"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/rising"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -272,14 +257,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="VISIBILITY:"
+                            android:text="@string/visibility"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/visibility"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="25.91"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -288,7 +272,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="GEOGRAPHIC LOCATION"
+                        android:text="@string/geographic_location"
                         android:layout_marginTop="10dp"
                         android:textSize="@dimen/weather_normal_text_size"
                         />
@@ -301,14 +285,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="LATITUDE:"
+                            android:text="@string/latitude"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/latitude"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="25.91"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -322,14 +305,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="LONGITUDE:"
+                            android:text="@string/longitude"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/longitude"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="25.91"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -343,14 +325,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="ADDRESS:"
+                            android:text="@string/address"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
                         <TextView
                             android:id="@+id/address"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="25.91"
                             android:textStyle="bold"
                             android:textSize="@dimen/weather_normal_text_size"
                             />
@@ -371,12 +352,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="POWERED BY "
+                    android:text="@string/powered_by"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="YAHOO!WEATHER"
+                    android:text="@string/yahoo_weather"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="italic"
                     />
